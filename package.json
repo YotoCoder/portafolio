@@ -1,0 +1,17 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "js/app.js",
+  "author": "Yoto",
+  "license": "MIT",
+  "devDependencies": {
+    "alive-server": "^1.2.9",
+    "sass": "^1.55.0"
+  },
+  "scripts": {
+    "build": "sass --no-source-map --style compressed sass/styles.sass:css/styles.css sass/pages:css/pages",
+    "dev:serve": "alive-server --entry-file=404.html .",
+    "dev:build": "sass --watch --no-source-map --style compressed sass/styles.sass:css/styles.css sass/pages:css/pages",
+    "dev:start": "npm run dev:build & npm run dev:serve"
+  }
+}
